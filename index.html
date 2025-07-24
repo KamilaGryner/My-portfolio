@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kamila Gryner | Portfolio & CV</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="img/IT.png" type="image/x-icon" />
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet" />
 
     <style>
+      @font-face {
+          font-family: 'TAN-PEARL';
+          src: url('font/tan-pearl.otf') format('truetype');
+        }
+
       * {
         box-sizing: border-box;
         margin: 0;
@@ -138,10 +143,23 @@
         align-items: center;
       }
       .hero-text h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        text-align: center;
+        font-size: 3.2rem;
+       -webkit-text-stroke: 0.01px #033f63;   /* kolor i grubość obramowania */
+        font-family: 'TAN-PEARL', serif;
+        background-image: url('img/bg.jpeg');
+        background-size: cover;
+        background-position: center;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+
       }
+
+      .image-text:hover {
+        filter: brightness(1.3);
+      }
+      
       .hero-text h1 span {
         font-weight: 700;
       }
@@ -662,7 +680,11 @@
         transform: none;
       }
 
-      /* Animation */
+      li:last-child {
+        margin-bottom: 0;
+      }
+      
+
       @keyframes bounce {
         0%,
         100% {
@@ -679,7 +701,10 @@
         }
       }
 
-      /* Media Queries for Mobile */
+      /* */
+
+      /**/
+
       @media (max-width: 1200px) {
         .container {
           max-width: 98vw;
@@ -797,6 +822,40 @@
           left: 12vw !important;
           top: 50px !important;
         }
+
+         ul, ol {
+          padding-left: 1em !important;
+          margin-bottom: 1em;
+        }
+        li {
+          font-size: 0.97rem;
+          margin-bottom: 0.55em;
+          line-height: 1.6;
+          word-break: break-word;
+          /* Zapobiega poziomemu scrollowi */
+          overflow-wrap: anywhere;
+        }
+      }
+
+      @media (max-width: 430px) {
+        ul, ol {
+          padding-left: 0.9em !important;
+        }
+        li {
+          font-size: 0.93rem;
+          margin-bottom: 0.44em;
+          line-height: 1.5;
+        }
+      }
+
+      @media (max-width: 340px) {
+        ul, ol {
+          padding-left: 0.75em !important;
+        }
+        li {
+          font-size: 0.89rem;
+          margin-bottom: 0.33em;
+        }
       }
 
       /* Rozmiary obrazów i video na mobilu */
@@ -880,6 +939,15 @@
           max-height: 44px !important;
           opacity: 0.4;
         }
+
+        ul, ol {
+          padding-left: 0.9em !important;
+        }
+        li {
+          font-size: 0.93rem;
+          margin-bottom: 0.44em;
+          line-height: 1.5;
+        }
       }
 
       @media (max-width: 340px) {
@@ -896,6 +964,14 @@
         .exp-card ul,
         .about-text ul {
           font-size: 0.93rem;
+        }
+
+         ul, ol {
+          padding-left: 0.75em !important;
+        }
+        li {
+          font-size: 0.89rem;
+          margin-bottom: 0.33em;
         }
       }
 
@@ -1103,9 +1179,9 @@
             <h1>Hi! I'm <span>Kamila</span></h1>
             <div id="typed-role"></div>
             <p id="description" class="reveal">
-              Aimed to get associated with a progressive organization, this
-              gives me scope to apply my knowledge and become an active member
-              of a team to work.
+              I would like to become a part of the company that gives me the
+              opportunity to use my knowledge and become an active member of the
+              team.
             </p>
             <ul id="social-links">
               <li>
@@ -1134,9 +1210,6 @@
                     height="24" />
                 </a>
               </li>
-              <li>
-                <a href="img/cv.pdf" class="btn">Download CV</a>
-              </li>
             </ul>
           </div>
         </div>
@@ -1159,21 +1232,37 @@
         <div class="about-grid">
           <div class="about-text">
             <h2>About Me</h2>
-            <ul class="reveal">
-              <li>
-                1st place (women's team) at the Academic Championships of
-                Malopolska in the rowing ergometer (2021, AZS AGH).
-              </li>
-              <li>
-                4th place in the Monaco Energy Boat Challenge (2021, AGH Solar
-                Boat)
-              </li>
-              <li>
-                2nd place in the Wildauer Solarbootregatta (2021, AGH Solar
-                Boat)
-              </li>
-              <li>Presented work at 60th & 61st Hutnicza Conference, Krakow</li>
-            </ul>
+            <p class="reveal">
+              My name is Kamila Gryner and I am a programming enthusiast from
+              Cracow. On a daily basis, I teach programming to young people as a
+              trainer at Giants of Programming, and I also teach computer
+              science and computer graphics at ZSE Technical School No. 9. I
+              have also been working as a freelancer since 2024, creating
+              websites and computer games.
+            </p> 
+          </br>
+            <p class="reveal">
+              I graduated with a degree in engineering and a master's degree in
+              technical and computer science education from AGH University of
+              Science and Technology in Cracow, with grades of 4.5 and 5.0
+              respectively.
+            </p>
+            </br>
+            <p class="reveal">
+              I have experience working with many technologies, including:
+              JavaScript, Python, C++, HTML/CSS, React, Angular, Firebase, as
+              well as in team projects ranging from website and game development
+              to participation in scientific conferences. I have previously
+              worked with the AGH Solar Boat team, among others, and
+              participated in international competitions and presentations.
+            </p>
+            </br>
+            <p class="reveal">
+              I am a communicative person who enjoys teamwork and development. I
+              love sharing knowledge - that's why others often ask me to teach
+              them something.
+            </p>
+            </br>
             <a href="#contact" class="btn">Contact Me</a>
           </div>
           <div class="about-image">
@@ -1183,124 +1272,6 @@
       </div>
     </section>
 
-    <section id="services" class="fade-in-up">
-      <div class="container">
-        <h2>Technical Skills</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <h3 class="reveal">Language</h3>
-            <p class="reveal">JavaScript, CSS3, HTML5, Lua, Python, C++</p>
-          </div>
-          <div class="service-card">
-            <h3 class="reveal">Design</h3>
-            <p class="reveal">Figma, Canva</p>
-          </div>
-          <div class="service-card">
-            <h3 class="reveal">Frontend</h3>
-            <p class="reveal">React, Angular</p>
-          </div>
-          <div class="service-card">
-            <h3 class="reveal">Backend</h3>
-            <p class="reveal">Firebase</p>
-          </div>
-          <div class="service-card">
-            <h3>Other</h3>
-            <p>
-              Bootstrap, Git, GitHub, Microsoft Office, UML, Kali Linux, 2D/3D
-              Unity
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="process" class="fade-in-up">
-      <div class="content">
-        <h2>Certificates</h2>
-        <ul class="reveal">
-          <li>“First aid training” – CCD Skills (2024)</li>
-          <li>
-            “Back-end technologies: Node.js and Express.js basics, working with
-            PM2 and WebStorm” – USU Concept Ltd. (2023)
-          </li>
-          <li>
-            “Certificate in English B2” – AGH University of Science and
-            Technology (2021)
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="experience" class="fade-in-up">
-      <div class="container">
-        <h2>Work Experience</h2>
-        <div class="experience-grid">
-          <div class="exp-card">
-            <h4 class="reveal">Freelancer</h4>
-            <span class="period">2024 to current</span>
-            <ul class="reveal">
-              <li>Web Development</li>
-              <li>UX /UI</li>
-              <li>Computer game development</li>
-            </ul>
-            <div class="progress"><div style="width: 90%"></div></div>
-          </div>
-          <div class="exp-card">
-            <h4 class="reveal">Programming Teacher</h4>
-            <span class="period">2024 to current</span>
-            <ul class="reveal">
-              <li>Teaching computer graphics.</li>
-              <li>Teaching web development</li>
-              <li>
-                Teaching algorithms and problem solving using C++ and Python.
-              </li>
-            </ul>
-            <div class="progress"><div style="width: 80%"></div></div>
-          </div>
-          <div class="exp-card">
-            <h4 class="reveal">Programming Trainer</h4>
-            <span class="period">Dec-2022 to Jun-2025</span>
-            <ul class="reveal">
-              <li>Teaching computer graphics.</li>
-              <li>Teaching web development</li>
-              <li>Teaching game development in Lua, cyber security and AI.</li>
-            </ul>
-            <div class="progress"><div style="width: 75%"></div></div>
-          </div>
-          <div class="exp-card">
-            <h4 class="reveal">Web Developer</h4>
-            <span class="period">Feb-2024 to Apr-2024</span>
-            <ul class="reveal">
-              <li>
-                Develop a responsive web application using React and Firebase.
-              </li>
-            </ul>
-            <div class="progress"><div style="width: 70%"></div></div>
-          </div>
-          <div class="exp-card">
-            <h4 class="reveal">Team Leader</h4>
-            <span class="period">Nov-2022 to Apr-2024</span>
-            <ul class="reveal">
-              <li>
-                Implementation of the Rector's Grant. Representing the
-                university at workshops, open days, and conferences.
-              </li>
-            </ul>
-            <div class="progress"><div style="width: 85%"></div></div>
-          </div>
-          <div class="exp-card">
-            <h4>Marketing & Programmer</h4>
-            <span class="period">Oct-2020 to Dec-2021</span>
-            <ul class="reveal">
-              <li>Website development.</li>
-              <li>Designing posters and organizing events.</li>
-              <li>Cooperation with sponsors.</li>
-            </ul>
-            <div class="progress"><div style="width: 85%"></div></div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section id="portfolio" class="fade-in-up">
       <div class="container">
@@ -1348,6 +1319,129 @@
         </div>
       </div>
     </section>
+
+    
+    <section id="experience" class="fade-in-up">
+      <div class="container">
+        <h2>Work Experience</h2>
+        <div class="experience-grid">
+          <div class="exp-card">
+            <h4 class="reveal">Freelancer</h4>
+            <span class="period">2024 - current</span>
+            <ul class="reveal">
+              <li>Web Development</li>
+              <li>UX /UI</li>
+              <li>Computer game development</li>
+            </ul>
+            <div class="progress"><div style="width: 90%"></div></div>
+          </div>
+          <div class="exp-card">
+            <h4 class="reveal">Programming Teacher</h4>
+            <span class="period">2024 - current</span>
+            <ul class="reveal">
+              <li>Teaching computer graphics.</li>
+              <li>Teaching web development</li>
+              <li>
+                Teaching algorithms and problem solving using C++ and Python.
+              </li>
+            </ul>
+            <div class="progress"><div style="width: 80%"></div></div>
+          </div>
+          <div class="exp-card">
+            <h4 class="reveal">Programming Trainer</h4>
+            <span class="period">Dec-2022 - Jun-2025</span>
+            <ul class="reveal">
+              <li>Teaching computer graphics.</li>
+              <li>Teaching web development</li>
+              <li>Teaching game development in Lua, cyber security and AI.</li>
+            </ul>
+            <div class="progress"><div style="width: 75%"></div></div>
+          </div>
+          <div class="exp-card">
+            <h4 class="reveal">Web Developer</h4>
+            <span class="period">Feb-2024 - Apr-2024</span>
+            <ul class="reveal">
+              <li>
+                Develop a responsive web application using React and Firebase.
+              </li>
+            </ul>
+            <div class="progress"><div style="width: 70%"></div></div>
+          </div>
+          <div class="exp-card">
+            <h4 class="reveal">Team Leader</h4>
+            <span class="period">Nov-2022 - Apr-2024</span>
+            <ul class="reveal">
+              <li>
+                Implementation of the Rector's Grant. Representing the
+                university at workshops, open days, and conferences.
+              </li>
+            </ul>
+            <div class="progress"><div style="width: 85%"></div></div>
+          </div>
+          <div class="exp-card">
+            <h4>Marketing & Programmer</h4>
+            <span class="period">Oct-2020 - Dec-2021</span>
+            <ul class="reveal">
+              <li>Website development.</li>
+              <li>Designing posters and organizing events.</li>
+              <li>Cooperation with sponsors.</li>
+            </ul>
+            <div class="progress"><div style="width: 85%"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="services" class="fade-in-up">
+      <div class="container">
+        <h2>Technical Skills</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3 class="reveal">Language</h3>
+            <p class="reveal">JavaScript, CSS3, HTML5, Lua, Python, C++</p>
+          </div>
+          <div class="service-card">
+            <h3 class="reveal">Design</h3>
+            <p class="reveal">Figma, Canva</p>
+          </div>
+          <div class="service-card">
+            <h3 class="reveal">Frontend</h3>
+            <p class="reveal">React, Angular</p>
+          </div>
+          <div class="service-card">
+            <h3 class="reveal">Backend</h3>
+            <p class="reveal">Firebase</p>
+          </div>
+          <div class="service-card">
+            <h3>Other</h3>
+            <p>
+              Bootstrap, Git, GitHub, Microsoft Office, UML, Kali Linux, 2D/3D
+              Unity
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="fade-in-up">
+      <div class="content">
+        <h2>Certificates</h2>
+        <ul class="reveal">
+          <li>
+            “Back-end technologies: Node.js and Express.js basics, working with
+            PM2 and WebStorm” – USU Concept Ltd. (2023)
+          </li>
+          <li>
+            “Certificate in English B2” – AGH University of Science and
+            Technology (2021)
+          </li>
+           <li>“First aid training” – CCD Skills (2024)</li>
+        </ul>
+      </div>
+    </section>
+
+    
 
     <section id="contact" class="fade-in-up">
       <div class="container">
@@ -1462,10 +1556,10 @@
       });
 
       const roles = [
-        "Web Developer",
+        "Frontend Developer",
         "Programming Teacher",
-        "Game Developer",
-        "Software Developer",
+        "Backend Developer",
+        "Fullstack Developer",
       ];
       let i = 0,
         j = 0,
