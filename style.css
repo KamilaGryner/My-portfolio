@@ -532,10 +532,9 @@ header,
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 80%;
+  max-width: 40vw;
   margin: 0 auto;
   gap: 18px;
-  width: 100%;
   background: var(--color-soft-sage);
   border-radius: 12px;
   box-shadow: 0 2px 16px 0 #0001;
@@ -546,8 +545,7 @@ header,
 #contact fieldset {
   border: none;
   width: 100%;
-  padding: 0;
-  margin: 0;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -812,8 +810,7 @@ li:last-child {
     font-size: 1rem;
   }
   #contact form {
-    min-width: 0;
-    width: 99vw;
+    min-width: 100%;
   }
 
   /**/
@@ -1061,10 +1058,6 @@ li:last-child {
   #experience h2,
   #process h2 {
     font-size: 1.1rem !important;
-  }
-
-  contact form {
-    padding: 5%;
   }
 
   .hero,
