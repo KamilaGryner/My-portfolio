@@ -2,14 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Kamila Gryner | Portfolio & CV</title>
     <link rel="icon" href="img/IT.png" type="image/x-icon" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
   </head>
   <body>
     <div id="scroll-progress"></div>
@@ -62,12 +61,17 @@
           class="shaky-plant decor-4" />
       </div>
       <div class="container">
-        <nav>
-          <a href="#">Home</a>
-          <a href="#about">About</a>
-          <a href="#portfolio">Portfolio</a>
-          <a href="#contact">Contact</a>
-        </nav>
+         <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+          </nav>
         <div class="hero">
           <div class="hero-text">
             <h1>Hi! I'm <span>Kamila</span></h1>
@@ -169,7 +173,6 @@
 
     <section id="portfolio" class="fade-in-up">
       <div class="container">
-        <h4>Marketing & Programmer</h4>
         <h2>My Portfolio</h2>
 
         <div class="portfolio-grid">
@@ -424,5 +427,6 @@
           stroke-linejoin="round" />
       </svg>
     </a>
+    <script src="script.js"></script>
   </body>
 </html>
