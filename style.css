@@ -140,12 +140,15 @@ nav a:hover {
 }
 .hero-text {
   flex: none;
-  min-width: 250px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
   align-items: center;
   font-size: 1.1rem;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* <-- ważne */
+  justify-content: center;
 }
 .hero-text h1 {
   font-size: 3rem;
@@ -252,25 +255,31 @@ nav a:hover {
   object-fit: cover;
   background: #eee;
 }
-
+.social-icon {
+  margin: 0 !important;
+  display: block;
+}
 #social-links {
+  width: 100%;
   display: flex;
-  justify-content: space-between; /* rozłóż równo ikonki */
-  align-items: center; /* wyrównaj je pionowo */
-  width: 160px; /* 2 ikony × 24px + 1 × 20px gap = 68px – dostosuj do swoich wartości! */
-  max-width: 90%; /* na wypadek bardzo wąskich ekranów */
-  margin: 20px auto 0; /* wyśrodkuj kontener i daj trochę przestrzeni nad nim */
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 0;
+  list-style-type: none;
+}
+
+#social-links li {
+  flex: none; /* zapobiega rozciąganiu się elementów */
+  margin: 0;
   padding: 0;
   list-style: none;
 }
-#social-links li {
-  margin: 0;
-  padding: 0;
-  flex: none; /* zapobiega rozciąganiu elementów */
-}
+
 #social-links img {
   display: block;
-  width: 3vw; /* wymuś tę samą wielkość ikony */
+  width: 32px; /* jednakowa wielkość ikon */
+  height: 32px;
 }
 
 #social-links a:hover img {
@@ -317,6 +326,9 @@ header,
   flex: 1;
   min-width: 180px;
   max-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #about .about-image img {
   border-radius: 12px;
@@ -325,6 +337,9 @@ header,
   object-fit: cover;
   width: 100%;
   aspect-ratio: 4/3;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #services {
@@ -410,6 +425,9 @@ header,
 }
 .exp-card ul {
   margin-bottom: 10px;
+}
+.exp-card li {
+  list-style: none;
 }
 .exp-card .progress {
   margin-top: 12px;
@@ -701,7 +719,7 @@ li:last-child {
   top: 50%;
 }
 .header-decor .decor-4 {
-  left: 15%;
+  left: 13.5%;
   top: 0%;
 }
 
@@ -726,15 +744,6 @@ li:last-child {
   .exp-card ul,
   .about-text ul {
     font-size: 0.93rem;
-  }
-
-  ul,
-  ol {
-    padding-left: 0.75em !important;
-  }
-  li {
-    font-size: 0.89rem;
-    margin-bottom: 0.33em;
   }
 }
 
@@ -785,6 +794,14 @@ li:last-child {
     font-size: 0.93rem;
     margin-bottom: 0.44em;
     line-height: 1.5;
+  }
+
+  #social-links {
+    gap: 22px !important;
+  }
+  #social-links img {
+    width: 40px !important;
+    height: 40px !important;
   }
 }
 
@@ -955,6 +972,13 @@ li:last-child {
     word-break: break-word;
     overflow-wrap: anywhere;
   }
+  #social-links {
+    justify-content: center !important;
+    width: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+  }
 }
 
 @media (max-width: 600px) {
@@ -991,6 +1015,24 @@ li:last-child {
     max-width: 97vw !important;
     box-sizing: border-box;
   }
+
+  #social-links {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100vw !important;
+    margin-left: calc(
+      -50vw + 50%
+    ) !important; /* hack na wyśrodkowanie na full width */
+    margin-right: 0 !important;
+    padding: 0 !important;
+    gap: 30px !important;
+  }
+  #social-links li {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
   /**/
 }
 
@@ -1019,6 +1061,10 @@ li:last-child {
   #experience h2,
   #process h2 {
     font-size: 1.1rem !important;
+  }
+
+  contact form {
+    padding: 5%;
   }
 
   .hero,
@@ -1147,6 +1193,13 @@ li:last-child {
     line-height: 1.6;
     word-break: break-word;
     overflow-wrap: anywhere;
+  }
+  #social-links {
+    justify-content: center !important;
+    width: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
   }
 }
 
