@@ -65,6 +65,16 @@ ol {
   box-shadow: 0 1px 4px #0001;
 }
 
+<<<<<<< HEAD
+=======
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1.2rem;
+  width: 100%;
+}
+
+>>>>>>> 4788823 (Update portfolio)
 header {
   background: var(--color-yellow);
   padding: 40px 0 0 0;
@@ -152,7 +162,11 @@ nav a:hover {
 }
 .hero-text h1 {
   font-size: 3rem;
+<<<<<<< HEAD
   -webkit-text-stroke: 0.01px #033f63;
+=======
+  -webkit-text-stroke: 0.01px #033f63; /* kolor i grubość obramowania */
+>>>>>>> 4788823 (Update portfolio)
   font-family: "TAN-PEARL", serif;
   background-image: url("img/bg.jpeg");
   background-size: cover;
